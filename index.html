@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="bigbutton" id="red">
+            <button onclick="countdecrament()" class="redbtn">-</button>
+            <p id="count"></p>
+            <button onclick="countincrament()" class="redbtn">+</button>
+        </div>
+        <div class="bigbutton" id="blue">
+            <button onclick="totaldecrament()" class="bluebtn">-</button>
+            <p id="total"></p>
+            <button onclick="totalincrament()" class="bluebtn">+</button>
+        </div>
+
+    <script>
+        let playCount = 1;
+        let totalCount = 1;
+        document.getElementById("count").innerHTML = playCount;
+        document.getElementById("total").innerHTML = totalCount;
+        document.getElementById("count").addEventListener("click", countincrament); 
+        document.getElementById("total").addEventListener("click", totalincrament);
+        document.getElementById("count").addEventListener("click", countdecrament);
+        document.getElementById("total").addEventListener("click", totaldecrament);
+        
+        function countincrament() {
+        document.getElementById("count").innerHTML = playCount += 1;
+        }
+
+        function totalincrament() {
+            document.getElementById("total").innerHTML = totalCount += 1;
+        }
+
+        function countdecrament() {
+            document.getElementById("count").innerHTML = playCount -= 1;
+        }
+
+        function totaldecrament() {
+            document.getElementById("total").innerHTML = totalCount -= 1;
+        }
+    </script>
+    </body>
+</html>
